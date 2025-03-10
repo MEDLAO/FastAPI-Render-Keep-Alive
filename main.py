@@ -1,8 +1,11 @@
 import os
+from dotenv import load_dotenv
 import requests
 import schedule
 import time
 
+
+load_dotenv()
 
 # List of public welcome endpoints for each API
 API_ENDPOINTS = [
@@ -11,7 +14,7 @@ API_ENDPOINTS = [
     "https://myemailscraperapi.p.rapidapi.com/"
 ]
 
-RAPIDAPI_KEY = "1fea9cedc0msh7aff31e0bcb98b7p124cb9jsne95689fbfbd5"
+RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 
 # Headers including the API key
 HEADERS = {
